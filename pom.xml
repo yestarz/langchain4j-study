@@ -19,6 +19,7 @@
         <module>01-hello-world</module>
         <module>02-chat-api</module>
         <module>03-chat-api-config</module>
+        <module>04-chat-stream</module>
     </modules>
 
     <properties>
