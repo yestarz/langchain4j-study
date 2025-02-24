@@ -23,6 +23,7 @@
         <module>05-chat-api-vision</module>
         <module>06-chat-memory</module>
         <module>07-prompt</module>
+        <module>08-json1</module>
     </modules>
 
     <properties>
