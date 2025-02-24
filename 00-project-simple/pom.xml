@@ -9,4 +9,12 @@
     <artifactId>00-project-simple</artifactId>
     <name>项目脚手架</name>
     <url>http://maven.apache.org</url>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-open-ai-spring-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
 </project>
