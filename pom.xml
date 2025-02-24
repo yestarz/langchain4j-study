@@ -18,6 +18,7 @@
         <module>00-project-simple</module>
         <module>01-hello-world</module>
         <module>02-chat-api</module>
+        <module>03-chat-api-config</module>
     </modules>
 
     <properties>
@@ -34,6 +35,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
 
 
