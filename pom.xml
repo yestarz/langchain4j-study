@@ -26,6 +26,7 @@
         <module>08-json1</module>
         <module>09-function</module>
         <module>10-graalvm</module>
+        <module>11-websearch</module>
     </modules>
 
     <properties>
