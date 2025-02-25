@@ -30,6 +30,9 @@
         <module>12-embedding</module>
         <module>13-embedding2</module>
         <module>14-sensitive-word</module>
+        <module>15-rag1</module>
+        <module>16-rag2</module>
+        <module>17-rag3</module>
     </modules>
 
     <properties>
