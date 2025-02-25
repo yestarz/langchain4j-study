@@ -24,6 +24,8 @@
         <module>06-chat-memory</module>
         <module>07-prompt</module>
         <module>08-json1</module>
+        <module>09-function</module>
+        <module>10-graalvm</module>
     </modules>
 
     <properties>
