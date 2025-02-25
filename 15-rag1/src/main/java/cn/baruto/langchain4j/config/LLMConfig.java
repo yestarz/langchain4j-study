@@ -2,10 +2,12 @@ package cn.baruto.langchain4j.config;
 
 import cn.baruto.langchain4j.service.AiAssistant;
 import dev.langchain4j.data.segment.TextSegment;
+import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.embedding.EmbeddingModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
 import dev.langchain4j.model.openai.OpenAiEmbeddingModel;
+import dev.langchain4j.rag.content.retriever.EmbeddingStoreContentRetriever;
 import dev.langchain4j.service.AiServices;
 import dev.langchain4j.store.embedding.EmbeddingStore;
 import dev.langchain4j.store.embedding.qdrant.QdrantEmbeddingStore;
@@ -64,7 +66,7 @@ public class LLMConfig {
         return QdrantEmbeddingStore.builder()
                 .host("192.168.56.106")
                 .port(6334)
-                .collectionName("testv")
+                .collectionName("rag1")
                 .build();
     }
 
@@ -75,6 +77,11 @@ public class LLMConfig {
     public AiAssistant aiAssistant() {
         return AiServices.builder(AiAssistant.class)
                 .chatLanguageModel(chatLanguageModel())
+                .chatMemory(MessageWindowChatMemory.withMaxMessages(10))
+                .contentRetriever(EmbeddingStoreContentRetriever.builder()
+                        .embeddingStore(embeddingStore())
+                        .embeddingModel(embeddingModel())
+                        .build())
                 .build();
     }
 }
