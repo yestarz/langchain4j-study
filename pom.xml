@@ -27,6 +27,7 @@
         <module>09-function</module>
         <module>10-graalvm</module>
         <module>11-websearch</module>
+        <module>12-embedding</module>
     </modules>
 
     <properties>
