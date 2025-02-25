@@ -1,7 +1,10 @@
 package cn.baruto.langchain4j.config;
 
+import cn.baruto.langchain4j.service.AiAssistant;
+import dev.langchain4j.agent.tool.graalvm.GraalVmJavaScriptExecutionTool;
 import dev.langchain4j.model.chat.ChatLanguageModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
+import dev.langchain4j.service.AiServices;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -24,4 +27,11 @@ public class LLMConfig {
                 .build();
     }
 
+    @Bean
+    public AiAssistant aiAssistant () {
+        return AiServices.builder(AiAssistant.class)
+                .chatLanguageModel(chatLanguageModel())
+                .tools(new GraalVmJavaScriptExecutionTool())
+                .build();
+    }
 }
