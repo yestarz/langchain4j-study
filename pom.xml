@@ -29,6 +29,7 @@
         <module>11-websearch</module>
         <module>12-embedding</module>
         <module>13-embedding2</module>
+        <module>14-sensitive-word</module>
     </modules>
 
     <properties>
