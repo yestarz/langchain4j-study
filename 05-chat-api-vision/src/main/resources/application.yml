@@ -1,9 +1,0 @@
-
-server:
-  port: 20003
-
-logging:
-  level:
-    dev:
-      ai4j:
-        openai4j: debug
