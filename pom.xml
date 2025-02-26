@@ -16,6 +16,7 @@
     <description>langchain4j-study</description>
     <modules>
         <module>01-chat-language-models</module>
+        <module>02-database-tool</module>
     </modules>
 
     <properties>
