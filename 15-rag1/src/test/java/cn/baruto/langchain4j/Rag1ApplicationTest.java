@@ -62,12 +62,12 @@ public class Rag1ApplicationTest {
 
     @Test
     public void test1(){
-        System.out.println(aiAssistant.chat("张三这个员工的月工资是多少？"));
+        System.out.println(aiAssistant.chat("java是什么？"));
     }
 
     @Test
     public void test2(){
-        System.out.println(aiAssistant.chat("工作时间是？"));
+        System.out.println(aiAssistant.chat("今天需要上班吗？"));
     }
 
     @Test

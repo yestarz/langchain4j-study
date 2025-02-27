@@ -1,6 +1,7 @@
 package cn.baruto.langchain4j.config;
 
 import cn.baruto.langchain4j.service.AiAssistant;
+import cn.baruto.langchain4j.tool.DateTimeTool;
 import dev.langchain4j.data.segment.TextSegment;
 import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 import dev.langchain4j.model.chat.ChatLanguageModel;
@@ -31,6 +32,7 @@ public class LLMConfig {
                 .modelName("qwen-turbo")
                 .logRequests(true)
                 .logResponses(true)
+                .temperature(0.0)
                 .baseUrl("https://dashscope.aliyuncs.com/compatible-mode/v1")
                 .build();
     }
@@ -82,6 +84,8 @@ public class LLMConfig {
                         .embeddingStore(embeddingStore())
                         .embeddingModel(embeddingModel())
                         .build())
+                .tools(new DateTimeTool())
                 .build();
     }
+
 }
