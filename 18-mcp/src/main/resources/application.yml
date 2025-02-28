@@ -7,3 +7,5 @@ logging:
     dev:
       ai4j:
         openai4j: debug
+      langchain4j:
+        mcp: debug

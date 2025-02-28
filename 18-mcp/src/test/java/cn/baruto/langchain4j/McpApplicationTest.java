@@ -20,4 +20,9 @@ public class McpApplicationTest {
     public void test2(){
         System.out.println(aiAssistant.chat("给我列出抖音热榜前10？"));
     }
+
+    @Test
+    public void testWeather1(){
+        System.out.println(aiAssistant.chat("今天重庆的天气怎么样？"));
+    }
 }
